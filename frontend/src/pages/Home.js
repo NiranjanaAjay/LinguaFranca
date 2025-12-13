@@ -121,7 +121,7 @@ export default function Landing() {
           <h1 style={title}>
             <span style={titleAccent}>Lingua</span>Franca
           </h1>
-          <p style={subtitle}>Speak freely — understand clearly.</p>
+          <p style={subtitle}>Speak freely, understand clearly.</p>
         </header>
 
         <main style={card}>
