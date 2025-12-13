@@ -6,6 +6,7 @@ export default function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -64,24 +65,35 @@ export default function SignUp() {
 
           <div>
             <label className="text-sm font-semibold">Email</label>
-            <input
+            
+              <input
               type="email"
               className="w-full p-3 border border-gray-300 rounded-xl mt-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-          </div>
+        </div>
 
           <div>
             <label className="text-sm font-semibold">Password</label>
-            <input
-              type="password"
+            <div className="relative">
+              <input
+              type={showPassword ? "text" : "password"}
               className="w-full p-3 border border-gray-300 rounded-xl mt-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-purple-600 hover:text-purple-800"
+            >
+            {showPassword ? "Hide" : "Show"}
+          </button>
+            </div>
+            
           </div>
 
           <button className="w-full bg-purple-700 text-white py-3 rounded-xl text-lg font-semibold hover:bg-purple-800 transition transform hover:-translate-y-1 shadow-lg">
