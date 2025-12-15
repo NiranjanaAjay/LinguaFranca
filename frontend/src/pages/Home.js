@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 /**
@@ -32,11 +33,13 @@ const LANGUAGES = [
   { code: "ru", name: "Russian" },
 ];
 
+
 export default function Landing() {
   const [input, setInput] = useState("");
   const [translated, setTranslated] = useState("");
   const [source, setSource] = useState("auto");
   const [target, setTarget] = useState("en");
+  const navigate=useNavigate();
 
   const [listening, setListening] = useState(false);
   const [recording, setRecording] = useState(false);
@@ -57,7 +60,7 @@ export default function Landing() {
    
 
     // Redirect to login page
-    window.location.href = "/signin";
+    navigate("/signin");
   } catch (err) {
     console.error("Logout failed", err);
   }
