@@ -158,8 +158,8 @@ async function handleTranslate() {
 
       <div style={container}>
         <header style={header}>
-          <h1 style={title}>
-            <span className="text-purple-700">Lingua</span>Franca
+          <h1 style={title} className="text-gray-800">
+            Lingua<span style={{color: "#6b46c1"}}>Franca</span>
           </h1>
           <p style={subtitle}>Speak freely, understand clearly.</p>
         </header>
@@ -261,11 +261,12 @@ async function handleTranslate() {
 
 const page = {
   minHeight: "100vh",
+  backgroundColor: "#ebdefa"
 };
 
 const topStripe = {
       height: "60px",
-      backgroundColor: "#9333ea",
+      backgroundColor: "#6b46c1",
       position: "relative",
       marginBottom:50,
 };
@@ -284,7 +285,6 @@ const title = {
   fontWeight: 800,
   background: "linear-gradient(90deg, #7c3aed, #a78bfa)",
   WebkitBackgroundClip: "text",
-  color: "transparent",
 };
 
 
@@ -297,16 +297,17 @@ const card = {
   boxShadow: "0 10px 40px rgba(99, 102, 241, 0.08)",
 };
 
-const Logbutton ={
-    padding: "8px 18px",
-    position: "absolute",
-    fontWeight: 600,
-    top: "8px",
-    right: "16px",
-    backgroundColor: "white",
-    color: "#6b46c1",
-    borderRadius: "6px",
-    cursor: "pointer",
+const Logbutton = {
+  padding: "12px 26px",
+  position: "absolute",
+  top: "8px",
+  right: "16px",
+  backgroundColor: "#6b46c1",
+  color: "white",
+  borderRadius: "8px",
+  cursor: "pointer",
+  fontSize: "17px",
+  fontWeight: 600,
 };
 
 const panels = {

@@ -13,7 +13,7 @@ export default function LandingPage() {
         />
 
         <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm">
-          Lingua<span className="text-purple-700">Franca</span>
+          Lingua<span style={{color: "#6b46c1"}}>Franca</span>
         </h1>
 
         <p className="mt-6 text-2xl text-gray-800 max-w-2xl mx-auto leading-relaxed">
@@ -25,7 +25,8 @@ export default function LandingPage() {
       {/* CTA Button */}
       <Link
         to="/signin"
-        className="px-10 py-4 bg-purple-700 text-white text-xl font-semibold rounded-xl shadow-lg hover:bg-purple-800 hover:shadow-xl transition-transform transform hover:-translate-y-1"
+        className="px-10 py-4 text-white text-xl font-semibold rounded-xl shadow-lg hover:bg-purple-800 hover:shadow-xl transition-transform transform hover:-translate-y-1"
+        style={{backgroundColor: "#6b46c1"}}
       >
         Try Now
       </Link>

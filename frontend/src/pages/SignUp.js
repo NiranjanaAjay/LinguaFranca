@@ -41,7 +41,7 @@ export default function SignUp() {
       {/* Logo Top Left */}
       <div className="absolute top-6 left-6 flex items-center gap-3">
         <img src="/logo.png" alt="Logo" className="w-12 h-12 drop-shadow-lg" />
-        <h1 className="text-2xl font-bold text-gray-800">LinguaFranca</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Lingua<span style={{color: "#6b46c1"}}>Franca</span></h1>
       </div>
 
       {/* Card */}

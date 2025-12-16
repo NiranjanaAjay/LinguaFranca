@@ -43,7 +43,7 @@ export default function SignIn() {
       {/* Logo Top Left */}
       <Link to="/" className="absolute top-6 left-6 flex items-center gap-3 hover:opacity-80 transition">
         <img src="/logo.png" alt="Logo" className="w-12 h-12 drop-shadow-lg" />
-        <h1 className="text-2xl font-bold text-gray-800">LinguaFranca</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Lingua<span className="text-purple-700">Franca</span></h1>
       </Link>
 
       {/* Card */}
