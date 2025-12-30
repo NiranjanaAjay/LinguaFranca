@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const LANGUAGES = [
   { code: "auto", name: "Auto detect" },
@@ -62,7 +63,7 @@ export default function Landing() {
 
   async function handleLogout() {
   try {
-  await axios.post("http://127.0.0.1:8000/logout", {}, { withCredentials: true });
+  await axios.post(`${API_BASE_URL}/logout`, {}, { withCredentials: true });
 } catch (err) {
   console.warn("Logout failed", err);
 } finally {
@@ -124,7 +125,7 @@ export default function Landing() {
   formData.append("target", target);
 
   try {
-    const res = await fetch("http://localhost:8000/speech", {
+    const res = await fetch(`${API_BASE_URL}/speech`, {
       method: "POST",
       body: formData,
     });
@@ -176,7 +177,7 @@ export default function Landing() {
 async function handleTranslate() {
   if (!input.trim()) return;
 
-  const res = await fetch("http://localhost:8000/translate", {
+  const res = await fetch(`${API_BASE_URL}/translate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
